@@ -4,10 +4,13 @@ end
 
 
 score(cellvalue::T, 
-    ::Type{ClimateVelocity}, 
-    ::TemporalChangeDetection) where {T<:AbstractFloat} = cellvalue
+    ::ClimateVelocity, 
+    ::Type{TemporalChangeDetection}) where {T<:AbstractFloat} = cellvalue
 
 
 score(cellvalue::T, 
-    ::Type{ClimateVelocity}, 
-    ::CurrentStateDetection) where {T<:AbstractFloat} = 1.0 - cellvalue 
+    ::ClimateVelocity, 
+    ::Type{CurrentStateDetection}) where {T<:AbstractFloat} = 1.0 - cellvalue 
+
+
+    

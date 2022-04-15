@@ -11,13 +11,13 @@ module BiodiversityObservationNetworks
     export SpatialSampler
 
     include(joinpath("layers", "layers.jl"))
-    include(joinpath("optimizationaxes.jl"))
-    export TemporalChangeDetection, CurrentStateDetection
-    export Layer, score
+    export OptimizationAxis, TemporalChangeDetection, CurrentStateDetection
+    export Layer
     include(joinpath("layers", "landcover.jl"))
     include(joinpath("layers", "uncertainty.jl"))
     include(joinpath("layers", "climatevelocity.jl"))
     export ClimateVelocity, Uncertainty, LandCover
+    export score
 
     include("sampler.jl")
     export rand, rand!
@@ -31,4 +31,5 @@ module BiodiversityObservationNetworks
 end
 
 # makebon(makesdm())
+
 

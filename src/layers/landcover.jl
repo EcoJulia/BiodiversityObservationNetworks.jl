@@ -19,8 +19,8 @@ _landcover_labels() = Dict(
 
 function score(
     cellvalue::T, 
-    ::Type{LandCover}, 
-    ::TemporalChangeDetection; 
+    ::LandCover, 
+    ::Type{CurrentStateDetection}; 
     scores =  Dict(
         :evergreen_deciduous => 0.1, 
         :evergreen => 0.1, 
@@ -42,8 +42,8 @@ end
 
 function score(
     cellvalue::T, 
-    ::Type{LandCover}, 
-    ::TemporalChangeDetection; 
+    ::LandCover, 
+    ::Type{TemporalChangeDetection}; 
     scores =  Dict(
         :evergreen_deciduous => 0.1, 
         :evergreen => 0.1, 
